@@ -5,13 +5,13 @@ import IndexPage from './pages/indexPage'
 import LoginPage from './pages/LoginPage'
 import Layout from './components/Layout'
 import RegisterPage from './pages/RegisterPage'
-import Test from './components/Test'
+import axios from 'axios'
 
 function App() {
+  axios.defaults.baseURL = 'http://localhost:3300';
 
   return (
     <>
-        <Test/>
         <Routes>
             <Route path='/' element={<Layout />} >
                 <Route index element={<IndexPage />} />
